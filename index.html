@@ -407,7 +407,7 @@ footer{
     <p class="hero-type" data-reveal style="--d:.16s">我是一名&nbsp;<span id="typed"></span><span class="caret"></span></p>
     <p class="hero-desc" data-reveal style="--d:.24s">
       就读于同济大学人工智能专业，关注<b>自动驾驶视频异常检测</b>。
-      相信好的预训练与归纳偏置，能让简单架构胜过堆砌复杂模块。
+      也热衷于把统计建模、大模型与全栈工程做成能跑、能用的完整项目。
     </p>
     <div class="hero-cta" data-reveal style="--d:.32s">
       <a class="btn primary" href="#">&gt; 下载简历.pdf</a> <!-- ✏️ href 改为简历 PDF 路径 -->
@@ -426,25 +426,25 @@ footer{
     <div class="sec-head" data-reveal><span class="sec-num">[01]</span><h2>关于我</h2><span class="sec-line"></span></div>
     <div class="about-grid">
       <div class="about-bio" data-reveal>
-        <p>我是同济大学人工智能专业的本科生（2029 届），关注<b>自动驾驶场景下的视频异常检测</b>——探索用视频基础模型与归纳偏置，让简单架构在异常检测任务上胜过复杂的专用设计。</p>
-        <p>工程上是个全栈实践者：从 PyTorch 模型训练、FastAPI 后端，到微信小程序与 React 前端都做过完整项目；也在用多智能体框架（AutoGen / LangGraph）搭建 AI 研究工具。喜欢把想法一路做到能跑、能用。</p>
+        <p>我是同济大学人工智能专业的本科生（2029 届），关注<b>自动驾驶场景下的视频异常检测</b>，同时持续跟进视频理解与异常检测方向的前沿进展。</p>
+        <p>工程上是个全栈实践者：从 PyTorch 深度学习建模、FastAPI 后端，到微信小程序前端都做过完整项目；也写过桥接 QQ 与 Claude Code 的自动化工具。喜欢把想法一路做到能跑、能用。</p>
         <div class="now-card">
           <h4>// CURRENTLY.LOG</h4>
-          <p>&gt; 在研：基于视频基础模型的交通异常检测（simple-tad）<br>&gt; 在读：视频理解 / 异常检测相关论文<br>&gt; 目标：深耕自动驾驶异常检测方向</p>
+          <p>&gt; 在研：自动驾驶异常检测方向调研<br>&gt; 在读：视频理解 / 异常检测相关论文<br>&gt; 目标：深耕自动驾驶异常检测方向</p>
         </div>
       </div>
       <div data-reveal style="--d:.12s">
         <div class="skill-group">
           <h4>LANGUAGES</h4>
-          <div class="chips"><span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">JavaScript</span><span class="chip">SQL</span></div>
+          <div class="chips"><span class="chip">Python</span><span class="chip">JavaScript</span><span class="chip">SQL</span></div>
         </div>
         <div class="skill-group">
           <h4>FRAMEWORKS</h4>
-          <div class="chips"><span class="chip">PyTorch</span><span class="chip">FastAPI</span><span class="chip">AutoGen / LangGraph</span><span class="chip">React</span><span class="chip">OpenCV / MediaPipe</span></div>
+          <div class="chips"><span class="chip">PyTorch</span><span class="chip">FastAPI</span><span class="chip">transformers / FinBERT2</span><span class="chip">OpenCV / MediaPipe</span></div>
         </div>
         <div class="skill-group">
           <h4>TOOLING</h4>
-          <div class="chips"><span class="chip">Git</span><span class="chip">Linux</span><span class="chip">ChromaDB</span><span class="chip">LaTeX</span></div>
+          <div class="chips"><span class="chip">Git</span><span class="chip">Linux</span><span class="chip">SQLite</span><span class="chip">LaTeX</span></div>
         </div>
       </div>
     </div>
@@ -476,31 +476,31 @@ footer{
       <article class="proj featured" data-reveal>
         <div>
           <div class="proj-head">
-            <div class="proj-icon">🚗</div>
-            <h3>simple-tad · 交通异常检测</h3>
+            <div class="proj-icon">📈</div>
+            <h3>碳价预测系统 · 统计建模竞赛</h3>
             <span class="proj-links"><a href="#">GITHUB ↗</a></span>
           </div>
-          <p>基于视频基础模型的交通异常检测研究：以 encoder-only Video ViT + 领域自适应预训练（DAPT）替代复杂的专用架构，在 DoTA / DADA-2000 上以更小的参数量与显存开销取得更优的 AUCROC——验证「更强的预训练能让简单架构胜过复杂设计」。</p>
-          <div class="tags"><span class="tag">PyTorch</span><span class="tag">VideoMAE</span><span class="tag">DAPT</span><span class="tag">DoTA / DADA-2000</span><span class="tag">BDD100K</span></div>
+          <p>基于时序融合变换器（TFT）的碳排放权价格预测：用 PyTorch 重写完整训练管线，并引入 FinBERT2 中文金融情感分析，从碳交易新闻中抽取政策强度、市场信心与 ESG 信号作为辅助特征。获上海市统计建模竞赛省级二等奖（队长）。</p>
+          <div class="tags"><span class="tag">PyTorch</span><span class="tag">TFT</span><span class="tag">FinBERT2</span><span class="tag">NLP</span><span class="tag">时间序列</span></div>
         </div>
         <div class="term" aria-hidden="true">
-          <div class="term-bar"><i></i><i></i><i></i><span>simple-tad — zsh</span></div>
-          <pre><code><span class="cmd">$</span> python run_mae_pretraining.py --dataset bdd100k
-<span class="cmd">$</span> python run_inference.py --ckpt dapt_vit_small.pth
-<span class="ok">✓ DAPT 领域自适应预训练完成 (BDD100K)</span>
-<span class="ok">✓ DoTA AUCROC 86.4 · 22M params · 95 FPS</span></code></pre>
+          <div class="term-bar"><i></i><i></i><i></i><span>carbon-price — zsh</span></div>
+          <pre><code><span class="cmd">$</span> python main.py
+<span class="ok">✓ 数据预处理与序列构建完成</span>
+<span class="ok">✓ TFT 训练完成 (QuantileLoss)</span>
+<span class="ok">✓ NLP 情感特征已注入 · 评估报告已生成</span></code></pre>
         </div>
       </article>
 
       <!-- ✏️ 普通项目卡片：复制整个 <article class="proj"> 即可新增 -->
       <article class="proj" data-reveal style="--d:.08s">
         <div class="proj-head">
-          <div class="proj-icon">📚</div>
-          <h3>Paper-Agent 调研报告系统</h3>
+          <div class="proj-icon">💬</div>
+          <h3>QQ-Claude Bridge</h3>
           <span class="proj-links"><a href="#">GITHUB ↗</a></span>
         </div>
-        <p>多智能体学术调研工具：输入研究主题，Search / Reader / Cluster / Writer / Reviewer 自动协作，数分钟生成结构完整的领域综述，支持 SSE 实时流式输出与 RAG 检索增强写作。</p>
-        <div class="tags"><span class="tag">AutoGen</span><span class="tag">LangGraph</span><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">ChromaDB</span></div>
+        <p>通过 QQ 私聊远程控制本地 Claude Code：基于 OneBot 11 协议桥接 NapCat 与 Claude Code CLI，支持指令前缀、QQ 白名单、多轮会话与工具权限控制，在手机上即可驱动桌面 AI 编程。</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">OneBot 11</span><span class="tag">NapCat</span><span class="tag">Claude Code</span></div>
       </article>
 
       <article class="proj" data-reveal style="--d:.16s">
@@ -534,20 +534,20 @@ footer{
       <li data-reveal>
         <span class="tl-dot"></span>
         <time>2026</time>
-        <h3>开展自动驾驶异常检测研究 <em>· simple-tad</em></h3>
-        <p>基于视频基础模型复现并探索交通异常检测，验证 encoder-only 架构 + 领域自适应预训练在 DoTA / DADA-2000 上的效果。</p>
+        <h3>上海市统计建模竞赛 <em>· 省级二等奖（队长）</em></h3>
+        <p>带队完成碳价预测项目，融合 TFT 时序建模与 NLP 情感分析，负责方案设计、建模与答辩。</p>
       </li>
       <li data-reveal style="--d:.08s">
         <span class="tl-dot"></span>
         <time>2026</time>
-        <h3>上海市统计建模竞赛 <em>· 省级二等奖（队长）</em></h3>
-        <p>作为队长带队完成统计建模项目，负责整体方案设计、建模与答辩。</p>
+        <h3>关注自动驾驶异常检测方向 <em>· 调研</em></h3>
+        <p>开始系统梳理视频异常检测与视频基础模型相关文献，明确深入研究方向。</p>
       </li>
       <li data-reveal style="--d:.16s">
         <span class="tl-dot"></span>
         <time>2025 — 2026</time>
-        <h3>取得初级数据分析师证书 <em>· 主导多个 AI 全栈项目</em></h3>
-        <p>系统掌握数据处理与统计分析方法；并从模型、后端到前端独立完成 Paper-Agent、hair_agent 等完整项目。</p>
+        <h3>取得初级数据分析师证书 <em>· 主导多个 AI 项目</em></h3>
+        <p>系统掌握数据处理与统计分析方法；并从后端、小程序到自动化工具，独立完成 QQ-Claude Bridge、hair_agent 等完整项目。</p>
       </li>
       <li data-reveal style="--d:.24s">
         <span class="tl-dot"></span>
@@ -586,7 +586,7 @@ footer{
 /* ===== 打字机效果 ===== */
 (function(){
   var el = document.getElementById('typed');
-  var roles = ['自动驾驶异常检测方向', '同济 AI 本科生', 'LLM 多智能体实践者', '终身学习者']; // ✏️ 换成你的标签
+  var roles = ['自动驾驶异常检测方向', '同济 AI 本科生', 'LLM 应用实践者', '终身学习者']; // ✏️ 换成你的标签
   var ri = 0, ci = 0, del = false;
   (function tick(){
     var word = roles[ri], delay;
